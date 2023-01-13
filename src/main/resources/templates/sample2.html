@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+<title>등록하기</title>
+</head>
+<body>
+    <form action="" method="POST" id="frm" name="frm">
+    <table>
+        <tr>
+            <td>
+                <input type = "text" id="consultingTitle" name="consultingTitle"/> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type = "text" id="contents" name="contents"/> 
+            </td>
+        </tr>
+        <tr>
+        <td>
+            <input type="button" id="list"   class="btn" value="등록하기" />
+        </td>
+    </tr>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+		
+		// 각 버튼을 클릭했을 때 동작을 정의  
+		<script>
+			// 문서 전체가 로딩되었을 때 실행되는 코드
+			$(function() {
+				// id 속성의 값이 list인 엘리먼트가 클릭되었을 때 동작을 정의
+				$('#list').on('click', function() {
+					let frm = $('#frm')[0];
+					frm.action = '/register/12';
+					frm.submit();
+				});
+			});
+		 </script>		 
+</form>
+</body>
+</html>

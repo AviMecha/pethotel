@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import pethotel.dto.ApplyDto;
 import pethotel.dto.ConsultingDto;
 import pethotel.mapper.PetHotelMapper;
 
@@ -41,5 +42,12 @@ public class PetHotelServiceImpl implements PetHotelService {
 	
 		return petHotelMapper.detail(consultingIdx);
 	}
+
+	@Override
+	public void insertapply(ApplyDto applyDto) throws Exception {
+		petHotelMapper.insertapply(applyDto);
+	}
+	
+	
 
 }

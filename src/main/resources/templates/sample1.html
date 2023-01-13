@@ -6,7 +6,7 @@
 </head>
 <body>
  <form action="" method="POST" id="frm" name="frm">
-	 <!-- <input type="hidden" name="consultingIdx" th:value="${sample.consultingIdx}" />  -->
+	 <input type="hidden" name="consultingIdx" th:value="${detail.consultingIdx}" /> 
 	<table>
 	<tr>
 	<td th:text="${detail.consultingIdx}">
@@ -19,9 +19,9 @@
 	</td>
 	</tr>
 	</table>
-	<!-- <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 		
-		각 버튼을 클릭했을 때 동작을 정의 
+		// 각 버튼을 클릭했을 때 동작을 정의  
 		<script>
 			// 문서 전체가 로딩되었을 때 실행되는 코드
 			$(function() {
@@ -32,7 +32,7 @@
 					frm.submit();
 				});
 			});
-		</script>		 -->
+		 </script>		 
 </form>
 </body>
 </html>

@@ -8,4 +8,6 @@ public class ConsultingDto {
 	private String contents;
 	private String reply;
 	private String consultingTitle;
+	
+	
 }

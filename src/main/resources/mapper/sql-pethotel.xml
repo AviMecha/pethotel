@@ -9,7 +9,7 @@
 	</insert>
 	<update id = "insertreply" parameterType="pethotel.dto.ConsultingDto" >
 	update  consulting
-	set reply = ${reply}
+	set reply = (#{reply})
 	where consulting_idx=#{consultingIdx}
 	</update>
 	<select id ="detail"  parameterType="int" resultType="pethotel.dto.ConsultingDto">
@@ -20,5 +20,9 @@
 	<select id ="consultinglist" resultType = "pethotel.dto.ConsultingDto">
 	select 	consulting_idx, consulting_title
 	from consulting
+	</select> 
+	<select id ="insertapply" parameterType="pethotel.dto.ApplyDto">
+	insert into apply(apply_name, apply_period, phonenumber, contents, dog_name)
+	values (#{applyName}, #{applyPeriod}, #{phonenumber}, #{contents}, #{dogName})
 	</select>
 </mapper>
